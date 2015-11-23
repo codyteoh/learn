@@ -1,0 +1,20 @@
+{
+  "name": "teohmengyong",
+  "version": "1.0.1",
+  "description": "my first npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teohmengyong/learn.git"
+  },
+  "keywords": [
+    "first",
+    "npm",
+    "package"
+  ],
+  "author": "teohmengyong",
+  "license": "ISC"
+}

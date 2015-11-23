@@ -1,0 +1,193 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'nsp',
+1 verbose cli   '-g' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.2
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'nsp', null ]
+7 verbose cache add spec nsp
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'nsp',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'nsp',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed nsp@*
+10 verbose addNamed "*" is a valid semver range for nsp
+11 silly addNameRange { name: 'nsp', range: '*', hasData: false }
+12 silly mapToRegistry name nsp
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/nsp
+16 verbose addNameRange registry:https://registry.npmjs.org/nsp not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/nsp
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 8:18:55 PM
+20 verbose request id d27e495e80c3db19
+21 http request GET https://registry.npmjs.org/nsp
+22 http 200 https://registry.npmjs.org/nsp
+23 silly get cb [ 200,
+23 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly get     etag: '"94NAIR5KT4QH4CGAZCPAWW3SG"',
+23 silly get     'content-type': 'application/json',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     'content-length': '42973',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Wed, 04 Nov 2015 12:18:55 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-sin6921-SIN',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1446639535.442874,VS0,VE499',
+23 silly get     vary: 'Accept' } ]
+24 verbose get saving nsp to /Users/Cody/.npm/registry.npmjs.org/nsp/.cache.json
+25 silly addNameRange number 2 { name: 'nsp', range: '*', hasData: true }
+26 silly addNameRange versions [ 'nsp',
+26 silly addNameRange   [ '0.0.1',
+26 silly addNameRange     '0.0.2',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.2.3',
+26 silly addNameRange     '0.2.4',
+26 silly addNameRange     '0.2.5',
+26 silly addNameRange     '0.2.6',
+26 silly addNameRange     '0.2.8',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.4.2',
+26 silly addNameRange     '0.5.2',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.6.1',
+26 silly addNameRange     '1.0.0',
+26 silly addNameRange     '1.0.1',
+26 silly addNameRange     '1.0.2',
+26 silly addNameRange     '1.0.3',
+26 silly addNameRange     '1.1.0',
+26 silly addNameRange     '2.0.0',
+26 silly addNameRange     '2.0.1' ] ]
+27 silly addNamed nsp@2.0.1
+28 verbose addNamed "2.0.1" is a plain semver version for nsp
+29 silly mapToRegistry name nsp
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/nsp
+33 verbose addRemoteTarball https://registry.npmjs.org/nsp/-/nsp-2.0.1.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/nsp/-/nsp-2.0.1.tgz',
+34 verbose addRemoteTarball   '68e9cf3b26552cc43ee201717f0fe66562255fc3' ]
+35 info retry fetch attempt 1 at 8:18:56 PM
+36 info attempt registry request try #1 at 8:18:56 PM
+37 http fetch GET https://registry.npmjs.org/nsp/-/nsp-2.0.1.tgz
+38 http fetch 200 https://registry.npmjs.org/nsp/-/nsp-2.0.1.tgz
+39 silly fetchAndShaCheck shasum 68e9cf3b26552cc43ee201717f0fe66562255fc3
+40 verbose addTmpTarball /var/folders/ct/3z_syk356191w_p4tsw866jh0000gp/T/npm-18212-4d76f930/registry.npmjs.org/nsp/-/nsp-2.0.1.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for nsp@2.0.1
+42 silly cache afterAdd nsp@2.0.1
+43 verbose afterAdd /Users/Cody/.npm/nsp/2.0.1/package/package.json not in flight; writing
+44 verbose afterAdd /Users/Cody/.npm/nsp/2.0.1/package/package.json written
+45 silly install resolved [ { name: 'nsp',
+45 silly install resolved     description: 'The Node Security (nodesecurity.io) command line interface',
+45 silly install resolved     version: '2.0.1',
+45 silly install resolved     author: { name: '^lift security' },
+45 silly install resolved     bin: { nsp: 'bin/nsp' },
+45 silly install resolved     dependencies:
+45 silly install resolved      { 'nodesecurity-npm-utils': '^3.0.0',
+45 silly install resolved        chalk: '^1.1.1',
+45 silly install resolved        'cli-table': '^0.3.1',
+45 silly install resolved        'https-proxy-agent': '^1.0.0',
+45 silly install resolved        joi: '^6.9.1',
+45 silly install resolved        rc: '^1.1.2',
+45 silly install resolved        semver: '^5.0.3',
+45 silly install resolved        subcommand: '^2.0.3',
+45 silly install resolved        wreck: '^6.3.0' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { code: '^1.5.0',
+45 silly install resolved        'eslint-config-nodesecurity': '^1.0.0',
+45 silly install resolved        'git-validate': '^2.1.0',
+45 silly install resolved        lab: '^6.1.0',
+45 silly install resolved        nock: '^2.15.0',
+45 silly install resolved        shrinkydink: '^1.0.0' },
+45 silly install resolved     keywords: [ 'security', 'nsp', 'nodesecurity' ],
+45 silly install resolved     license: 'Apache-2.0',
+45 silly install resolved     main: 'lib/index.js',
+45 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodesecurity/nsp.git' },
+45 silly install resolved     scripts:
+45 silly install resolved      { 'setup-offline': 'curl -sS https://api.nodesecurity.io/advisories -o advisories.json',
+45 silly install resolved        test: 'lab -a code -L -t 100',
+45 silly install resolved        nsp: 'bin/nsp check',
+45 silly install resolved        shrinkwrap: 'npm shrinkwrap && shrinkydink' },
+45 silly install resolved     'pre-commit': [ 'test' ],
+45 silly install resolved     gitHead: '1d897c377983d2ebca189c44de8f4d566f44155c',
+45 silly install resolved     bugs: { url: 'https://github.com/nodesecurity/nsp/issues' },
+45 silly install resolved     homepage: 'https://github.com/nodesecurity/nsp#readme',
+45 silly install resolved     _id: 'nsp@2.0.1',
+45 silly install resolved     _shasum: '68e9cf3b26552cc43ee201717f0fe66562255fc3',
+45 silly install resolved     _from: 'nsp@*',
+45 silly install resolved     _npmVersion: '3.3.9',
+45 silly install resolved     _nodeVersion: '4.1.1',
+45 silly install resolved     _npmUser: { name: 'nlf', email: 'quitlahok@gmail.com' },
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '68e9cf3b26552cc43ee201717f0fe66562255fc3',
+45 silly install resolved        tarball: 'http://registry.npmjs.org/nsp/-/nsp-2.0.1.tgz' },
+45 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/nsp/-/nsp-2.0.1.tgz' } ]
+46 info install nsp@2.0.1 into /usr/local/lib
+47 info installOne nsp@2.0.1
+48 verbose installOne of nsp to /usr/local/lib not in flight; installing
+49 verbose lock using /Users/Cody/.npm/_locks/nsp-bb66e5b5899dce48.lock for /usr/local/lib/node_modules/nsp
+50 silly install write writing nsp 2.0.1 to /usr/local/lib/node_modules/nsp
+51 verbose unbuild lib/node_modules/nsp
+52 silly gentlyRm /usr/local/lib/node_modules/nsp is being purged from base /usr/local
+53 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/nsp
+54 verbose tar unpack /Users/Cody/.npm/nsp/2.0.1/package.tgz
+55 verbose tar unpacking to /usr/local/lib/node_modules/nsp
+56 silly gentlyRm /usr/local/lib/node_modules/nsp is being purged
+57 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/nsp
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 error tar.unpack untar error /Users/Cody/.npm/nsp/2.0.1/package.tgz
+60 verbose unlock done using /Users/Cody/.npm/_locks/nsp-bb66e5b5899dce48.lock for /usr/local/lib/node_modules/nsp
+61 verbose fstream_path /usr/local/lib/node_modules/nsp
+62 verbose fstream_type Directory
+63 verbose fstream_class DirWriter
+64 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/nsp'
+64 verbose stack     at Error (native)
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+65 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+66 verbose cwd /Users/Cody/Desktop/myserver/node-project
+67 error Darwin 14.5.0
+68 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "nsp" "-g"
+69 error node v4.1.2
+70 error npm  v2.14.4
+71 error path /usr/local/lib/node_modules/nsp
+72 error code EACCES
+73 error errno -13
+74 error syscall mkdir
+75 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/nsp'
+75 error     at Error (native)
+75 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/nsp']
+75 error   errno: -13,
+75 error   code: 'EACCES',
+75 error   syscall: 'mkdir',
+75 error   path: '/usr/local/lib/node_modules/nsp',
+75 error   fstream_type: 'Directory',
+75 error   fstream_path: '/usr/local/lib/node_modules/nsp',
+75 error   fstream_class: 'DirWriter',
+75 error   fstream_stack:
+75 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+75 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+75 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+76 error Please try running this command again as root/Administrator.
+77 verbose exit [ -13, true ]
+78 verbose unbuild lib/node_modules/nsp
+79 silly gentlyRm /usr/local/lib/node_modules/nsp is being purged from base /usr/local
+80 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/nsp
