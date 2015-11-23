@@ -1,0 +1,93 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--tag',
+1 verbose cli   'master' ]
+2 info using npm@3.4.1
+3 info using node@v4.1.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Cody/Desktop/myserver/learn/how-to-npm',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Cody/.npm/teohmengyong/1.0.1/package.tgz not in flight; packing
+9 info lifecycle teohmengyong@1.0.1~prepublish: teohmengyong@1.0.1
+10 silly lifecycle teohmengyong@1.0.1~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/Cody/.npm/teohmengyong/1.0.1/package.tgz',
+11 verbose tar pack   '/Users/Cody/Desktop/myserver/learn/how-to-npm' ]
+12 verbose tarball /Users/Cody/.npm/teohmengyong/1.0.1/package.tgz
+13 verbose folder /Users/Cody/Desktop/myserver/learn/how-to-npm
+14 verbose addLocalTarball adding from inside cache /Users/Cody/.npm/teohmengyong/1.0.1/package.tgz
+15 silly cache afterAdd teohmengyong@1.0.1
+16 verbose afterAdd /Users/Cody/.npm/teohmengyong/1.0.1/package/package.json not in flight; writing
+17 verbose afterAdd /Users/Cody/.npm/teohmengyong/1.0.1/package/package.json written
+18 silly publish { name: 'teohmengyong',
+18 silly publish   version: '1.0.1',
+18 silly publish   description: 'my first npm package',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'node test.js' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/teohmengyong/learn.git' },
+18 silly publish   keywords: [ 'first', 'npm', 'package' ],
+18 silly publish   author: { name: 'teohmengyong' },
+18 silly publish   license: 'ISC',
+18 silly publish   readme: 'ERROR: No README data found!',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   bugs: { url: 'https://github.com/teohmengyong/learn/issues' },
+18 silly publish   homepage: 'https://github.com/teohmengyong/learn#readme',
+18 silly publish   _id: 'teohmengyong@1.0.1',
+18 silly publish   _shasum: '818fc8585238267f296c6e45d81103966d846b99',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name teohmengyong
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry http://localhost:15443/
+23 silly mapToRegistry uri http://localhost:15443/teohmengyong
+24 verbose publish registryBase http://localhost:15443/
+25 silly publish uploading /Users/Cody/.npm/teohmengyong/1.0.1/package.tgz
+26 verbose request uri http://localhost:15443/teohmengyong
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 9:51:05 PM
+29 verbose request id 9494eb11d9688f36
+30 http request PUT http://localhost:15443/teohmengyong
+31 http 404 http://localhost:15443/teohmengyong
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   date: 'Sun, 22 Nov 2015 13:51:05 GMT',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'content-length': '19' }
+33 verbose request invalidating /Users/Cody/.npm/localhost_15443/teohmengyong on PUT
+34 error publish Failed PUT 404
+35 verbose stack Error: missing : teohmengyong
+35 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 404
+37 verbose pkgid teohmengyong
+38 verbose cwd /Users/Cody/Desktop/myserver/learn/how-to-npm
+39 error Darwin 14.5.0
+40 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "master"
+41 error node v4.1.2
+42 error npm  v3.4.1
+43 error code E404
+44 error 404 missing : teohmengyong
+44 error 404
+44 error 404 'teohmengyong' is not in the npm registry.
+44 error 404 You should bug the author to publish it (or use the name yourself!)
+44 error 404
+44 error 404 Note that you can also install from a
+44 error 404 tarball, folder, http url, or git url.
+45 verbose exit [ 1, true ]

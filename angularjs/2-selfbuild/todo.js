@@ -2,8 +2,8 @@ angular.module('todoApp',[])
 .controller('TodoListController',function(){
 	var todoList=this;
 	todoList.todos=[
-	{text:'fist',done:true},
-	{text:'secs',done:false}
+	{text:'first',done:false},
+	{text:'second',done:true}
 	];
 	todoList.addTodo=function(){
 		todoList.todos.push({text:todoList.todoText,done:false});
@@ -22,5 +22,5 @@ angular.module('todoApp',[])
 		angular.forEach(oldTodos,function(todo){
 			if(!todo.done) todoList.todos.push(todo);
 		});
-	}
+	};
 });
