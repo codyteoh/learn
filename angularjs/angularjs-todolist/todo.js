@@ -8,6 +8,7 @@ angular.module('todoApp',[])
 	todoList.addTodo=function(){
 		todoList.todos.push({text:todoList.todoText,done:false});
 		todoList.todoText='';
+		$("#addtext").focus();
 	};
 	todoList.remaining=function(){
 		var count=0;

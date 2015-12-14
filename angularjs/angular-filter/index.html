@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Angular Filter | Cody Teoh Laboratory</title>
+	<link rel="icon" type="image/png" href="http://lab.codyteoh.com/img/favicon.png">
+	<meta http-equiv="X UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta property="og:url" content="https://">
+	<meta property="og:image" content="https://">
+	<meta property="og:title" content="Cody Teoh Laboratory AngularJS Filter">
+	<meta property="og:description" content="Cody Teoh Laboratory AngularJS Filter Example">
+	<meta name="title" content="Cody Teoh Laboratory AngularJS Filter">
+	<meta name="description" content="Cody Teoh Laboratory AngularJS Filter Example">
+
+	<!-- EXTERNAL IMPORTS -->
+	<script type="text/javascript" src="http://codyteoh.com/lab/imports/jquery.min.js"></script>
+	<script type="text/javascript" src="http://codyteoh.com/lab/imports/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://codyteoh.com/lab/imports/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://codyteoh.com/lab/imports/bootstrap.min.css">
+
+	<!-- LOCALHOST IMPORTS -->
+<!-- 
+	<script type="text/javascript" src="http://localhost:8000/lab/imports/jquery.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8000/lab/imports/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8000/lab/imports/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8000/lab/imports/bootstrap.min.css">
+ -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://codyteoh.com/lab/imports/"> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- LOCALHOST IMPORTS WITHOUT NET -->
+	<!-- INTERNAL IMPORTS -->
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body ng-app="filterApp">
+	<div ng-controller="filterController as afc">
+		<header class="default-primary-color text-primary-color">
+			<div class="container header-container">
+				<h1>AngularJS Filter Example</h1>
+			</div>
+		</header>
+		<div class="container-fluid">
+			<div class="row light-primary-color">
+				<div class="container ">
+					<input class="input-search primary-text-color" ng-model="searchText" placeholder="Search">
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<table>
+							<tr class="table-header"  ng-hide="!filterContactList.length"><td class="table-checkbox"><input type="checkbox"></td><td>ID</td><td>Name</td><td>Contact Number</td><td>Address</td></tr>
+							<tr ng-repeat="list in filterContactList =(afc.contactlist | filter:searchText)">
+								<td class="small">
+									<input type="checkbox" ng-model="list.done">
+								</td>
+								<td>{{list.id}}</td>
+								<td>{{list.name}}</td>
+								<td>{{list.contactno}}</td>
+								<td>{{list.address}}</td>
+							</tr>
+							<tr><p ng-show="!filterContactList.length">Nothing Was Found!</p></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dark-primary-color plus btn secondary-text-color">+</div>
+		<div class="add-contact-container">
+			<div class="add-contact-overlay"></div>
+			<div class="add-contact">
+				<div class="fluid-container light-primary-color">
+					<div class="container">
+						<h1>Add Contact</h1>
+					</div>
+				</div>	
+				<div class="container add-form-container">
+					<input class="form-control" type="text" ng-model="afc.inputName" placeholder="Name">
+					<input class="form-control" type="text" ng-model="afc.inputContactno" placeholder="Contact No.">
+					<input class="form-control" type="text" ng-model="afc.inputAddress" placeholder="Address">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

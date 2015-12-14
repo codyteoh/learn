@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Table App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="timetable.js"></script>
+	<script type="text/javascript" src="../angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="timeTableController as ttc">
+		<p ng-click="ttc.test()"></p>
+		<div ng-repeat="tt in ttc.timeTable">
+			<span>{{tt.time}} : {{tt.text}}</span>
+			<p ng-click="ttc.remove({{tt.text}})">Remove</p>
+		</div>
+		<form ng-submit="ttc.addtt()">
+			<input type="text" ng-model="ttc.timeofit" maxlength="4">
+			<input type="text" ng-model="ttc.timeText">
+			<input type="submit" value="Add">
+		</form>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+angular.module('myApp',[])
+.controller('timeTableController',function(){
+	var ttc=this;
+	ttc.timeTable=[
+	{time:"0600",text:"Start of the day"},
+	];
+	// Add time table
+	ttc.addtt=function(){
+		ttc.timeTable.push({time:ttc.timeofit,text:ttc.timeText});
+		ttc.timeText='';
+		ttc.timeofit='';
+	};
+});
+</script>

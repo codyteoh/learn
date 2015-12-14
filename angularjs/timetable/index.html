@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>TIME TABLE APP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="timetable.js"></script>
+</head>
+<body class="text-center" ng-app="timeTableApp">
+	<div class="container" ng-controller="timeTableController as ttc">
+		<h1 id="date"></h1>
+		<h2 id="time"></h2>
+		<div>
+			<div class="custom-table" ng-repeat="items in ttc.items">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-1">{{items.time}}:</div>
+					<div class="col-md-3">{{items.items}}</div>
+					<div class="col-md-4"></div>
+				</div>
+				 
+			</div>
+		</div>
+		<div id="test"></div>
+		<form ng-submit="ttc.add()">
+			<div class="row">
+				<div class="col-md-2">
+					<input type="number" ng-model="ttc.times" placeholder="time" maxlength="4">
+				</div>
+				<div class="col-md-7">
+					<input class="btn-block" type="text" ng-model="ttc.newitems" placeholder="Items">
+				</div>
+				<div class="col-md-3">
+					<button class="btn btn-primary" type="submit">Add</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</body>
+</html>

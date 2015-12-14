@@ -1,0 +1,47 @@
+.dark-primary-color    { background: #D32F2F; }
+.default-primary-color { background: #F44336; }
+.light-primary-color   { background: #FFCDD2; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FFC107; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; font-size:0.8em;}
+.divider-color         { border-color: #B6B6B6; }
+.body-container{
+	background:rgba(255,255,255,0.95);
+	padding:20px 20px 50px 20px;
+}
+body{
+	font-size:2em;
+}
+.btn{
+	border:none;
+}
+button,button:focus,button:hover,.btn:hover,.btn:focus,.btn{
+	color:#fff;
+	outline:none;
+	border:none;
+	transition:0.3s all;
+}
+.btn:focus{
+	transform:scale(0.8);
+}
+input{
+	border:none;
+	outline:none;
+	padding:5px 20px 5px 25px;
+	border:#ffcdd2 solid 1px;  
+}
+.done-true{
+	text-decoration: line-through;
+	color: grey;
+}
+ul{
+	list-style-type: none;
+	padding:5px 5px 5px 0px;
+}
+ul li{
+	padding:5px 0px 5px 0px;
+}
+ul li input[type='checkbox']{
+	padding:0px 0px 0px 20px;
+}

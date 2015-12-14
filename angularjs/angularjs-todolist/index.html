@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html ng-app="todoApp">
+<head>
+	<title>Angular Todo List | Cody Teoh Laboratory</title>
+	<link rel="icon" type="image/png" href="http://lab.codyteoh.com/img/favicon.png">
+	<meta http-equiv="X UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta property="og:url" content="https://">
+	<meta property="og:image" content="https://">
+	<meta property="og:title" content="Cody Teoh Laboratory AngularJS Todo App">
+	<meta property="og:description" content="Cody Teoh Laboratory AngularJS Single Page Application Todo App">
+	<meta name="title" content="Cody Teoh Laboratory AngularJS Filter">
+	<meta name="description" content="Cody Teoh Laboratory AngularJS Single Page Application Todo App">
+
+	<!-- EXTERNAL IMPORTS -->
+	<script type="text/javascript" src="http://codyteoh.com/lab/imports/jquery.min.js"></script>
+	<script type="text/javascript" src="http://codyteoh.com/lab/imports/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://codyteoh.com/lab/imports/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="todo.css">
+	<script type="text/javascript" src="todo.js"></script>
+</head>
+<body class="light-primary-color primary-text-color" ng-controller="TodoListController as todoList">
+	<header class="container-fluid default-primary-color text-primary-color">
+		<div class="container">
+			<h1>To Do List</h1>
+		</div>
+	</header>
+	<div class="container body-container">
+		<form ng-submit="todoList.addTodo()">
+			<input id="addtext" type="text" ng-model="todoList.todoText" size="40" placeholder="Add To Do List Items here" required>
+			<input class="btn default-primary-color text-primary-color" type="submit" value="Add">
+		</form>
+		<hr class="divider-color">
+		<span> {{todoList.remaining()}} of {{todoList.todos.length}} </span>
+		[ <a class="secondary-text-color" href="" ng-click="todoList.archieve()">Archieve</a> ]
+		<ul>
+			<li ng-repeat="todo in todoList.todos">
+				<input type="checkbox" ng-model="todo.done">
+				<span class="done-{{todo.done}}"> {{todo.text}} </span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
