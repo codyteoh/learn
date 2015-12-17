@@ -4,4 +4,4 @@ This is a documentation to trace back languages that I have learn and examples t
 
 ## Demo
 
-You can visit the [laboratory](https://lab.codyteoh.com) and please feel free to drop me a message. 
+You can visit the [laboratory](http://lab.codyteoh.com) and please feel free to drop me a message. 
