@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Polymer Tester</title>
+	<link rel="stylesheet" type="text/css" href="local/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="local/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body ng-app="polymerTesterApp">
+	<div ng-controller="polymerTesterController as ptc">
+	<header class="">
+		<h1 ng-click="ptc.test()">Polymer To Learn List</h1>
+	</header>
+	<div class="container custom-container1">
+		<div class="custom-inner-container1">
+			<h2>Iron Elements</h2>
+			<div ng-repeat="list in ptc.ironlist" ng-bind='check:0'>
+				<input class="cb-{{list.done}}" type="checkbox" ng-model="list.done">
+				<a href="{{list.href}}"><span class="cb-list-{{list.done}}">{{list.toLearn}}</span></a>
+				<span class="text-right view-{{list.done}}"><a href="demo/{{list.toLearn}}/">Demo</a></span>
+			</div>
+			<h2>Paper Elements</h2>
+			<div ng-repeat="list in ptc.paperlist" ng-bind='check:0'>
+				<input class="cb-{{list.done}}" type="checkbox" ng-model="list.done">
+				<a href="{{list.href}}"><span class="cb-list-{{list.done}}">{{list.toLearn}}</span></a>
+				<span class="text-right view-{{list.done}}"><a href="demo/{{list.toLearn}}/">Demo</a></span>
+			</div>
+			<h2>Platinum Elements</h2>
+			<div ng-repeat="list in ptc.platinumlist" ng-bind='check:0'>
+				<input class="cb-{{list.done}}" type="checkbox" ng-model="list.done">
+				<a href="{{list.href}}"><span class="cb-list-{{list.done}}">{{list.toLearn}}</span></a>
+				<span class="text-right view-{{list.done}}"><a href="demo/{{list.toLearn}}/">Demo</a></span>
+			</div>
+			<h2>Miscellaneous</h2>
+			<div ng-repeat="list in ptc.mislist" ng-bind='check:0'>
+				<input class="cb-{{list.done}}" type="checkbox" ng-model="list.done">
+				<a href="{{list.href}}"><span class="cb-list-{{list.done}}">{{list.toLearn}}</span></a>
+				<span class="text-right view-{{list.done}}"><a href="demo/{{list.toLearn}}/">Demo</a></span>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+<footer>
+
+</footer>
+</html>

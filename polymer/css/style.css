@@ -1,0 +1,69 @@
+header{
+	position:fixed;
+	top:0;
+	width:100%;
+	max-height:89px;
+	background:#4A2B0F;	
+	color:#fff;
+	margin:0 auto;
+	padding:0px 0px 10px 0px;
+	text-indent:30px;
+	z-index:99;
+}
+.custom-container1{
+	position:relative;
+	top:79px;
+	font-size:1.5em;
+	padding:0px 150px 20px 150px;
+}
+@media only screen and (max-width:767px){
+	.custom-container1{
+		padding:0px 50px 20px 50px;
+	}
+}
+@media only screen and (max-width:68px){
+	.custom-container1{
+		padding:0px 10px 20px 10px;
+	}
+}
+footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+body{
+	background:#457E86;
+	font-family:Helvetica,sans-serif;
+}
+.container,.container a,.container a:hover{
+	background:#EEEEEE;
+	color:#215f1e;
+	text-decoration: none;
+}
+.container a:hover{
+	color:rgba(33,95,30,0.75);
+}
+.container h2{
+	color:rgba(74,43,15,0.95);
+}
+.custom-container1-cb{
+	padding:5px 20px 5px 20px;
+}
+.custom-inner-container1{
+	position:relative;
+	max-width:500px;
+	margin:auto;
+}
+.cb-list-true{
+	color:rgba(33,95,30,0.5);
+}
+input[type=checkbox]{
+	margin:0 100px 0 0 ;
+}
+.text-right{
+	position:absolute;
+	right:0;
+}
+.view-false{
+	display:none;
+}

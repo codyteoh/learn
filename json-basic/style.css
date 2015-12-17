@@ -1,0 +1,22 @@
+.dark-primary-color    { background: #388E3C; }
+.default-primary-color { background: #4CAF50; }
+.light-primary-color   { background: #C8E6C9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FFEB3B; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+.body-container{
+	background:rgba(255,255,255,0.99);
+	padding:20px 20px 50px 20px;
+	overflow:auto;
+}
+table{
+	padding:15px;
+	width:50%;
+	margin:auto 0;
+}
+td,tr{
+	padding:10px 5px 10px 15px;
+	border:1px solid rgba(100,100,100,0.9);
+}

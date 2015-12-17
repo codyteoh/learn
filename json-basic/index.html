@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="http://lab.codyteoh.com/img/favicon.png">
+  <title>getJSON demo | Cody Teoh Laboratory</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="light-primary-color">
+  <header class="default-primary-color text-primary-color ">
+    <div class="container">
+      <h1>JSON Example </h1>
+    </div>
+  </header>
+  <div class="container body-container">
+    <div class="btn secondary-primary-color accent-color" onclick="storeit()">Call JSON</div>
+    <hr class="divider-color">
+    <div id="placeholder">Click on "Call JSON" to return the json file in this div</div>
+    <hr class="divider-color">
+    <div id="list"></div>
+  </div>
+</body>
+</html>
+<script type="text/javascript">
+var store;
+function storeit(){
+  $.getJSON('read.json',function(data){
+    store=data.users;
+    $('#placeholder').html(JSON.stringify(store));
+  });
+}
+$.getJSON('read.json',function(data){
+  var output="<table><tr><td>Name</td><td>Joined Date</td></tr>";
+  // $('#placeholder').html(JSON.stringify(data.users));
+  for (var i in data.users){
+    output+="<tr><td>"+data.users[i].firstName+" "+data.users[i].lastName+"</td><td>"+data.users[i].joined.month+"</td></tr>";
+  }
+  output+="</table>";
+  $('#list').html(output);
+});
+// $('#placeholder').html(data.users[0].firstName + " "+ data.users[0].lastName+"--"+data.users[0].joined.month);
+</script>
