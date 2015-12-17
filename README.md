@@ -4,4 +4,4 @@ This is a documentation to trace back languages that I have learn and examples t
 
 ## Demo
 
-Describe and show how to run the tests with code examples.
+You can visit the <a href="href://lab.codyteoh.com">laboratory</a> and please feel free to drop me a message. 
