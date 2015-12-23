@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS Timer | Cody Teoh</title>
+	<meta http-equiv="X UA-Compatible" content="IE=Edge,Chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="author" content="Cody Teoh Meng Yong">
+	<meta name="title" content="AngularJS Timer | Cody Teoh Lab Laboratory">
+	<meta name="description" content="AngularJS Timer | Cody Teoh Lab Laboratory angularjs timer settimeout function">
+	<meta name="HandheldFriendly" content="yes">
+	<meta property="og:title" content="AngularJS Timer | Cody Teoh Lab Laboratory">
+	<meta property="og:description" content="AngularJS Timer | Cody Teoh Lab Laboratory angularjs timer settimeout function">
+	<meta property="og:url" content="http://lab.codyteoh.com/experiement/angularjs/angular-timer/">
+	<meta property="og:image" content="http://lab.codyteoh.com/experiment/img/favicon.png">
+	<!-- EXTERNAL SCRIPTS IMPORTS -->
+	<script type="text/javascript" src="http://lab.codyteoh.com/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="http://lab.codyteoh.com/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://lab.codyteoh.com/lib/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://lab.codyteoh.com/lib/bootstrap.min.css">
+	<!-- INTERNAL SCRIPTS IMPORTS -->
+	<script type="text/javascript" src="http://localhost:8000/lab/experiment/angularjs/angularjs-timer/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8000/lab/experiment/angularjs/angularjs-timer/style.css">
+</head>
+<body class="light-primary-color" ng-app="timerApp">
+	<header class="default-primary-color text-primary-color">
+		<div class="container">
+			<h1>AngularJS Timer Example</h1>
+		</div>
+	</header>
+	<div class="container body-container" ng-controller="timerController as tc">
+		<label>Date Format: <input ng-model="format"></label>
+		<hr>
+		Current time is <span my-current-time=format></span>
+		Blood 1: <font color="red">{{blood_1}}</font>
+		Blood 2: <font color="red">{{blood_2}}</font>
+		<br>
+		<button class="btn btn-primary" type="button" data-ng-click="fight()">Fight</button>
+		<button class="btn btn-primary" type="button" data-ng-click="stopFight()">Stop Fight</button>
+		<button class="btn btn-primary" type="button" data-ng-click="resetFight()">Reset Fight</button>
+	</div>
+</body>
+</html>	
